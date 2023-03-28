@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="generator" content="pandoc"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+    <title>2244c60ed4fa47e28e5aa867456f2533</title>
+    <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 64em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    font-family: "IBM Plex Sans", sans-serif;
+    }
+    h1, h2, h3 {
+      font-family: "Inria Serif", sans-serif;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+            font-family: "JetBrains Mono", monospace;
+
+      font-size: 85%;
+      margin: 0;
+    }
+     strong {
+    font-family: "Inria Serif", sans-serif;
+    font-weight : bolder;
+    }
+
+
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: #e5e5e5;
+     overflow: visible;
+     padding: 4px;
+     border-radius: 4px;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+
+
+
+
+
+
+
+
+
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section
+        id="shri-ramdeobaba-college-of-engineering-and-management-nagpur"
+        class="cell markdown" data-collapsed="false">
+    <h1>
+        <center>Shri Ramdeobaba College of Engineering and Management,
+            Nagpur
+        </center>
+    </h1>
+    <h2
+            id="department-of-computer-science-and-engineering">
+        <center>Department
+            of Computer Science and Engineering
+        </center>
+    </h2>
+    <h2 id="natural-language-processing-lab">
+        <center>Natural Language
+            Processing Lab
+        </center>
+    </h2>
+    <p><strong>Name</strong> : Sagar Pathak<br> <strong>Branch</strong> : CSE -
+        AIML (VI<sup>th</sup> SEM) <br><strong>Roll Num</strong> : E-63</p>
+</section>
+<div class="cell markdown" data-collapsed="false">
+    <h2> AIM :</h2>
+    <ol>
+        <li>Write a Python NLTK program to split the text sentence/paragraph
+            from genesis corpus and display it into a list of words. Remove the
+            Punctuation and Stopwords from the given text and perform Stemming and
+            POS tagging.
+        </li>
+        <li>Write a Python program to tokenize sentences with nltk, spacy and
+            gensim in language other than English (german).
+        </li>
+    </ol>
+</div>
+<section id="1-importing-the-dependencies" class="cell markdown"
+         data-collapsed="false">
+    <h2>1. Importing the Dependencies</h2>
+</section>
+<div class="cell code" data-execution_count="1" data-collapsed="true">
+    <div class="sourceCode" id="cb1"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"
+                                                                                          aria-hidden="true"
+                                                                                          tabindex="-1"></a><span
+            class="im">from</span> nltk.corpus <span class="im">import</span> genesis</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span
+        class="im">import</span> stopwords</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.tokenize <span
+        class="im">import</span> RegexpTokenizer</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span
+        class="im">import</span> PorterStemmer</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span
+        class="im">import</span> spacy</span></code></pre>
+    </div>
+</div>
+<div class="cell markdown" data-collapsed="false">
+    <h2 id="part-a">Part A</h2>
+    <h2 id="2-working-with-the-genesis-corpus">2. Working with the Genesis
+        Corpus</h2>
+</div>
+<section id="21-analyzing-the-genesis-corpus" class="cell markdown"
+         data-collapsed="false">
+    <h3>2.1 Analyzing the Genesis Corpus</h3>
+</section>
+<div class="cell code" data-execution_count="2" data-collapsed="false">
+    <div class="sourceCode" id="cb2"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"
+                                                                                          aria-hidden="true"
+                                                                                          tabindex="-1"></a>genesis.fileids()</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="2">
+<pre><code>[&#39;english-kjv.txt&#39;,
+ &#39;english-web.txt&#39;,
+ &#39;finnish.txt&#39;,
+ &#39;french.txt&#39;,
+ &#39;german.txt&#39;,
+ &#39;lolcat.txt&#39;,
+ &#39;portuguese.txt&#39;,
+ &#39;swedish.txt&#39;]</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="3" data-collapsed="false">
+    <div class="sourceCode" id="cb4"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"
+                                                                                          aria-hidden="true"
+                                                                                          tabindex="-1"></a>genesis.words(<span
+            class="st">&#39;english-web.txt&#39;</span>)</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="3">
+        <pre><code>[&#39;In&#39;, &#39;the&#39;, &#39;beginning&#39;, &#39;God&#39;, &#39;created&#39;, &#39;the&#39;, ...]</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="4" data-collapsed="false">
+    <div class="sourceCode" id="cb6"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"
+                                                                                          aria-hidden="true"
+                                                                                          tabindex="-1"></a>genesisWords <span
+            class="op">=</span> genesis.words(<span class="st">&#39;english-web.txt&#39;</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(genesisWords)</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="4">
+        <pre><code>44054</code></pre>
+    </div>
+</div>
+<section id="22-removing-stopwords-from-the-genesis-corpus-text"
+         class="cell markdown" data-collapsed="false">
+    <h3>2.2 Removing StopWords from the Genesis Corpus Text</h3>
+</section>
+<section id="221-list-of-predefined-stopwords" class="cell markdown"
+         data-collapsed="false">
+    <h4>2.2.1 List of Predefined Stopwords</h4>
+</section>
+<div class="cell code" data-execution_count="5" data-collapsed="false">
+    <div class="sourceCode" id="cb8"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"
+                                                                                          aria-hidden="true"
+                                                                                          tabindex="-1"></a>stopwordsList <span
+            class="op">=</span> stopwords.words(<span class="st">&#39;english&#39;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f&quot;Some of the stop words : </span><span
+        class="sc">{</span>stopwordsList[:<span class="dv">15</span>]<span class="sc">}</span><span class="ss">, length of the stopwords list in english language : </span><span
+        class="sc">{</span><span class="bu">len</span>(stopwordsList)<span class="sc">}</span><span
+        class="ss">&quot;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre>
+    </div>
+    <div class="output stream stdout">
+<pre><code>Some of the stop words : [&#39;i&#39;, &#39;me&#39;, &#39;my&#39;, &#39;myself&#39;, &#39;we&#39;, &#39;our&#39;, &#39;ours&#39;, &#39;ourselves&#39;, &#39;you&#39;, &quot;you&#39;re&quot;, &quot;you&#39;ve&quot;, &quot;you&#39;ll&quot;, &quot;you&#39;d&quot;, &#39;your&#39;, &#39;yours&#39;], length of the stopwords list in english language : 179
+</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="6" data-collapsed="false">
+    <div class="sourceCode" id="cb10"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>genesisWords_wo_stopwords <span
+            class="op">=</span> [word <span class="cf">for</span> word <span class="kw">in</span> genesisWords <span
+            class="cf">if</span> <span class="kw">not</span> word <span class="kw">in</span> stopwordsList]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(genesisWords_wo_stopwords)</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="6">
+        <pre><code>25756</code></pre>
+    </div>
+</div>
+<div class="cell markdown" data-collapsed="false">
+    <p>As we can see, we have reduced the length of genesis words list from
+        <span class="math inline">44054</span> to <span
+                class="math inline">25756</span>, which implies that stop words are
+        removed successfully.</p>
+</div>
+<div class="cell code" data-execution_count="7" data-collapsed="false">
+    <div class="sourceCode" id="cb12"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>genesisWords_wo_stopwords</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="7">
+<pre><code>[&#39;In&#39;,
+ &#39;beginning&#39;,
+ &#39;God&#39;,
+ &#39;created&#39;,
+ &#39;heavens&#39;,
+ &#39;earth&#39;,
+ &#39;.&#39;,
+ &#39;Now&#39;,
+ &#39;earth&#39;,
+ &#39;formless&#39;,
+ &#39;empty&#39;,
+ &#39;.&#39;,
+ &#39;Darkness&#39;,
+ &#39;surface&#39;,
+ &#39;deep&#39;,
+ ...]</code></pre>
+    </div>
+</div>
+<section id="23-removing-the-punctuations-from-genesis-corpus"
+         class="cell markdown" data-collapsed="false">
+    <h3>2.3 Removing the Punctuations from Genesis Corpus</h3>
+</section>
+<section id="231-using-nltks-regexptokeniser" class="cell markdown"
+         data-collapsed="false">
+    <h4>2.3.1 Using NLTK's RegExpTokeniser</h4>
+</section>
+<div class="cell code" data-execution_count="8" data-collapsed="false">
+    <div class="sourceCode" id="cb14"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>regexTokenizer <span
+            class="op">=</span> RegexpTokenizer(<span class="vs">r&#39;\w+&#39;</span>)</span></code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="9" data-collapsed="false">
+    <div class="sourceCode" id="cb15"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a><span
+            class="co">&#39; &#39;</span>.join(genesisWords_wo_stopwords)</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="9">
+        <pre><code>&#39;In beginning God created heavens earth . Now earth formless empty . Darkness surface deep . God \&#39; Spirit hovering surface waters . God said , &quot; Let light ,&quot; light . God saw light , saw good . God divided light darkness . God called light Day , darkness called Night . There evening morning , one day . God said , &quot; Let expanse middle waters , let divide waters waters .&quot; God made expanse , divided waters expanse waters expanse ; . God called expanse sky . There evening morning , second day . God said , &quot; Let waters sky gathered together one place , let dry land appear ;&quot; . God called dry land Earth , gathering together waters called Seas . God saw good . God said , &quot; Let earth put forth grass , herbs yielding seed , fruit trees bearing fruit kind , seed , earth ;&quot; . The earth brought forth grass , herbs yielding seed kind , trees bearing fruit , seed , kind ; God saw good . There evening morning , third day . God said , &quot; Let lights expanse sky divide day night ; let signs , seasons , days years ; let lights expanse sky give light earth ;&quot; . God made two great lights : greater light rule day , lesser light rule night . He also made stars . God set expanse sky give light earth , rule day night , divide light darkness . God saw good . There evening morning , fourth day . God said , &quot; Let waters swarm swarms living creatures , let birds fly earth open expanse sky .&quot; God created large sea creatures , every living creature moves , waters swarmed , kind , every winged bird kind . God saw good . God blessed , saying , &quot; Be fruitful , multiply , fill waters seas , let birds multiply earth .&quot; There evening morning , fifth day . God said , &quot; Let earth bring forth living creatures kind , livestock , creeping things , animals earth kind ;&quot; . God made animals earth kind , livestock kind , everything creeps ground kind . God saw good . God said , &quot; Let us make man image , likeness : let dominion fish sea , birds sky , livestock , earth , every creeping thing creeps earth .&quot; God created man image . In God \&#39; image created ; male female created . God blessed . God said , &quot; Be fruitful , multiply , fill earth , subdue . Have dominion fish sea , birds sky , every living thing moves earth .&quot; God said , &quot; Behold , I given every herb yielding seed , surface earth , every tree , bears fruit yielding seed . It food . To every animal earth , every bird sky , everything creeps earth , life , I given every green herb food ;&quot; . God saw everything made , , behold , good . There evening morning , sixth day . The heavens earth finished , vast array . On seventh day God finished work made ; rested seventh day work made . God blessed seventh day , made holy , rested work created made . This history generations heavens earth created , day Yahweh God made earth heavens . No plant field yet earth , herb field yet sprung ; Yahweh God caused rain earth . There man till ground , mist went earth , watered whole surface ground . Yahweh God formed man dust ground , breathed nostrils breath life ; man became living soul . Yahweh God planted garden eastward , Eden , put man formed . Out ground Yahweh God made every tree grow pleasant sight , good food ; tree life also middle garden , tree knowledge good evil . A river went Eden water garden ; parted , became four heads . The name first Pishon : one flows whole land Havilah , gold ; gold land good . There aromatic resin onyx stone . The name second river Gihon : river flows whole land Cush . The name third river Hiddekel : one flows front Assyria . The fourth river Euphrates . Yahweh God took man , put garden Eden dress keep . Yahweh God commanded man , saying , &quot; Of every tree garden may freely eat ; tree knowledge good evil , shall eat ; day eat surely die .&quot; Yahweh God said , &quot; It good man alone ; I make helper suitable .&quot; Out ground Yahweh God formed every animal field , every bird sky , brought man see would call . Whatever man called every living creature , name . The man gave names livestock , birds sky , every animal field ; man found helper suitable . Yahweh God caused deep sleep fall man , slept ; took one ribs , closed flesh place . He made rib , Yahweh God taken man , woman , brought man . The man said , &quot; This bone bones , flesh flesh . She called Woman , taken Man .&quot; Therefore man leave father mother , join wife , one </code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="10" data-collapsed="false">
+    <div class="sourceCode" id="cb17"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>genesisWords_wo_punctuations <span
+            class="op">=</span> regexTokenizer.tokenize(<span class="st">&#39; &#39;</span>.join(genesisWords_wo_stopwords))</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>genesisWords_wo_punctuations[:<span class="dv">50</span>]</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="10">
+<pre><code>[&#39;In&#39;,
+ &#39;beginning&#39;,
+ &#39;God&#39;,
+ &#39;created&#39;,
+ &#39;heavens&#39;,
+ &#39;earth&#39;,
+ &#39;Now&#39;,
+ &#39;earth&#39;,
+ &#39;formless&#39;,
+ &#39;empty&#39;,
+ &#39;Darkness&#39;,
+ &#39;surface&#39;,
+ &#39;deep&#39;,
+ &#39;God&#39;,
+ &#39;Spirit&#39;,
+ &#39;hovering&#39;,
+ &#39;surface&#39;,
+ &#39;waters&#39;,
+ &#39;God&#39;,
+ &#39;said&#39;,
+ &#39;Let&#39;,
+ &#39;light&#39;,
+ &#39;light&#39;,
+ &#39;God&#39;,
+ &#39;saw&#39;,
+ &#39;light&#39;,
+ &#39;saw&#39;,
+ &#39;good&#39;,
+ &#39;God&#39;,
+ &#39;divided&#39;,
+ &#39;light&#39;,
+ &#39;darkness&#39;,
+ &#39;God&#39;,
+ &#39;called&#39;,
+ &#39;light&#39;,
+ &#39;Day&#39;,
+ &#39;darkness&#39;,
+ &#39;called&#39;,
+ &#39;Night&#39;,
+ &#39;There&#39;,
+ &#39;evening&#39;,
+ &#39;morning&#39;,
+ &#39;one&#39;,
+ &#39;day&#39;,
+ &#39;God&#39;,
+ &#39;said&#39;,
+ &#39;Let&#39;,
+ &#39;expanse&#39;,
+ &#39;middle&#39;,
+ &#39;waters&#39;]</code></pre>
+    </div>
+</div>
+<section id="3-stemming-and-pos-tagging-of-genesis-corpus"
+         class="cell markdown" data-collapsed="false">
+    <h2>3. Stemming and POS Tagging of Genesis Corpus</h2>
+</section>
+<section id="31-stemming-using-porterstemmer" class="cell markdown"
+         data-collapsed="false">
+    <h3>3.1 Stemming Using <code>PorterStemmer</code></h3>
+</section>
+<div class="cell code" data-execution_count="11" data-collapsed="false">
+    <div class="sourceCode" id="cb19"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>pStemmer <span
+            class="op">=</span> PorterStemmer()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Word&quot;</span>.ljust(<span
+        class="dv">15</span>), <span class="ss">f&quot;Stem Word&quot;</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span
+        class="op">*</span> <span class="dv">25</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span
+        class="kw">in</span> genesisWords_wo_punctuations[:<span class="dv">25</span>]:</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span
+        class="ss">f&quot;</span><span class="sc">{</span>word<span class="sc">.</span>lower()<span
+        class="sc">}</span><span class="ss">&quot;</span>.ljust(<span class="dv">15</span>), <span
+        class="ss">f&quot;</span><span class="sc">{</span>pStemmer<span class="sc">.</span>stem(word)<span
+        class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre>
+    </div>
+    <div class="output stream stdout">
+<pre><code>Word            Stem Word
+-------------------------
+in              in
+beginning       begin
+god             god
+created         creat
+heavens         heaven
+earth           earth
+now             now
+earth           earth
+formless        formless
+empty           empti
+darkness        dark
+surface         surfac
+deep            deep
+god             god
+spirit          spirit
+hovering        hover
+surface         surfac
+waters          water
+god             god
+said            said
+let             let
+light           light
+light           light
+god             god
+saw             saw
+</code></pre>
+    </div>
+</div>
+<section id="32-part-of-speech-tagging-using-spacy"
+         class="cell markdown" data-collapsed="false">
+    <h3>3.2 Part Of Speech Tagging Using SpaCy</h3>
+</section>
+<div class="cell code" data-execution_count="12" data-collapsed="false">
+    <div class="sourceCode" id="cb21"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>spacyObj <span
+            class="op">=</span> spacy.load(<span class="st">&#39;en_core_web_sm&#39;</span>)</span></code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="13" data-collapsed="false">
+    <div class="sourceCode" id="cb22"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>genesisWords_Doc <span
+            class="op">=</span> spacyObj(<span
+            class="st">&quot; &quot;</span>.join(genesisWords_wo_punctuations))</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>genesisWords_Doc[:<span class="dv">100</span>]</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="13">
+        <pre><code>In beginning God created heavens earth Now earth formless empty Darkness surface deep God Spirit hovering surface waters God said Let light light God saw light saw good God divided light darkness God called light Day darkness called Night There evening morning one day God said Let expanse middle waters let divide waters waters God made expanse divided waters expanse waters expanse God called expanse sky There evening morning second day God said Let waters sky gathered together one place let dry land appear God called dry land Earth gathering together waters called Seas God saw good God said Let</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="14" data-collapsed="false">
+    <div class="sourceCode" id="cb24"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a><span
+            class="bu">print</span>(<span class="ss">f&quot;Word&quot;</span>.ljust(<span class="dv">15</span>), <span
+            class="st">&quot;Alpha&quot;</span>, <span class="st">&quot;Space&quot;</span>, <span class="st">&quot;Stop&quot;</span>, <span
+            class="st">&quot;Punctuation&quot;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span
+        class="op">*</span> <span class="dv">47</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span
+        class="kw">in</span> genesisWords_Doc[:<span class="dv">25</span>]:</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span
+        class="ss">f&quot;</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">&quot;</span>.ljust(<span
+        class="dv">15</span>), word.is_alpha, <span class="st">&#39;&#39;</span>, word.is_space, word.is_stop, word.is_punct)</span></code></pre>
+    </div>
+    <div class="output stream stdout">
+<pre><code>Word            Alpha Space Stop Punctuation
+-----------------------------------------------
+In              True  False True False
+beginning       True  False False False
+God             True  False False False
+created         True  False False False
+heavens         True  False False False
+earth           True  False False False
+Now             True  False True False
+earth           True  False False False
+formless        True  False False False
+empty           True  False True False
+Darkness        True  False False False
+surface         True  False False False
+deep            True  False False False
+God             True  False False False
+Spirit          True  False False False
+hovering        True  False False False
+surface         True  False False False
+waters          True  False False False
+God             True  False False False
+said            True  False False False
+Let             True  False False False
+light           True  False False False
+light           True  False False False
+God             True  False False False
+saw             True  False False False
+</code></pre>
+    </div>
+</div>
+<div class="cell markdown" data-collapsed="false">
+    <h2 id="part-b">Part B</h2>
+    <h2 id="4-tokenizing-german-language-using-nltk">4. Tokenizing German
+        Language Using NLTK</h2>
+</div>
+<section id="41-analyzing-the-german-language-from-genesis-corpus"
+         class="cell markdown" data-collapsed="false">
+    <h3>4.1 Analyzing the German language from Genesis Corpus</h3>
+</section>
+<div class="cell code" data-execution_count="15" data-collapsed="false">
+    <div class="sourceCode" id="cb26"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a><span
+            class="co"># German language corpus is inbuilt in Genesis Corpus</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>genesis.fileids()[<span
+        class="dv">4</span>]</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="15">
+        <pre><code>&#39;german.txt&#39;</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="16" data-collapsed="false">
+    <div class="sourceCode" id="cb28"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>germanTokens <span
+            class="op">=</span> genesis.words(<span class="st">&#39;german.txt&#39;</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>germanTokens</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="16">
+        <pre><code>[&#39;Am&#39;, &#39;Anfang&#39;, &#39;schuf&#39;, &#39;Gott&#39;, &#39;Himmel&#39;, &#39;und&#39;, ...]</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="17" data-collapsed="false">
+    <div class="sourceCode" id="cb30"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a><span
+            class="bu">len</span>(germanTokens)</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="17">
+        <pre><code>43941</code></pre>
+    </div>
+</div>
+<section id="42-removing-stopwords-from-text" class="cell markdown"
+         data-collapsed="false">
+    <h3>4.2 Removing stopwords from text</h3>
+</section>
+<div class="cell code" data-execution_count="18" data-collapsed="false">
+    <div class="sourceCode" id="cb32"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>germanStopWords <span
+            class="op">=</span> <span class="bu">set</span>(stopwords.words(<span
+            class="st">&#39;german&#39;</span>))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>germanTokens[:<span
+        class="dv">10</span>]</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="18">
+        <pre><code>[&#39;Am&#39;, &#39;Anfang&#39;, &#39;schuf&#39;, &#39;Gott&#39;, &#39;Himmel&#39;, &#39;und&#39;, &#39;Erde&#39;, &#39;.&#39;, &#39;Und&#39;, &#39;die&#39;]</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="19" data-collapsed="false">
+    <div class="sourceCode" id="cb34"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>germanTokens_wo_stopwords <span
+            class="op">=</span> [word <span class="cf">for</span> word <span class="kw">in</span> germanTokens <span
+            class="cf">if</span> <span class="kw">not</span> word <span class="kw">in</span> germanStopWords]</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;text without stopwords : </span><span
+        class="sc">{</span>germanTokens_wo_stopwords[:<span class="dv">10</span>]<span class="sc">}</span><span
+        class="ss">, length of text : </span><span class="sc">{</span><span class="bu">len</span>(germanTokens_wo_stopwords)<span
+        class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre>
+    </div>
+    <div class="output stream stdout">
+<pre><code>text without stopwords : [&#39;Am&#39;, &#39;Anfang&#39;, &#39;schuf&#39;, &#39;Gott&#39;, &#39;Himmel&#39;, &#39;Erde&#39;, &#39;.&#39;, &#39;Und&#39;, &#39;Erde&#39;, &#39;wüst&#39;], length of text : 26699
+</code></pre>
+    </div>
+</div>
+<div class="cell markdown" data-collapsed="false">
+    <p>As we can see, we have reduced the length of genesis words list from
+        <span class="math inline">43941</span> to <span
+                class="math inline">26699</span>, which implies that stop words are
+        removed successfully.</p>
+</div>
+<section id="43-removing-punctuations-using-regexptokenizer"
+         class="cell markdown" data-collapsed="false">
+    <h3>4.3 Removing punctuations using <code>RegexpTokenizer</code></h3>
+</section>
+<div class="cell code" data-execution_count="20" data-collapsed="false">
+    <div class="sourceCode" id="cb36"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>punctTokenizer <span
+            class="op">=</span> RegexpTokenizer(<span class="vs">r&#39;\w+&#39;</span>)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>germanWords_wo_punct <span class="op">=</span> punctTokenizer.tokenize(<span
+        class="st">&quot; &quot;</span>.join(germanTokens_wo_stopwords))</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;text without punctuations : </span><span
+        class="sc">{</span>germanWords_wo_punct[:<span class="dv">10</span>]<span class="sc">}</span><span class="ss">, length of text : </span><span
+        class="sc">{</span><span class="bu">len</span>(germanWords_wo_punct)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre>
+    </div>
+    <div class="output stream stdout">
+<pre><code>text without punctuations : [&#39;Am&#39;, &#39;Anfang&#39;, &#39;schuf&#39;, &#39;Gott&#39;, &#39;Himmel&#39;, &#39;Erde&#39;, &#39;Und&#39;, &#39;Erde&#39;, &#39;wüst&#39;, &#39;leer&#39;], length of text : 18831
+</code></pre>
+    </div>
+</div>
+<section id="44-pos-tagging-using-spacy" class="cell markdown"
+         data-collapsed="false">
+    <h3>4.4 POS Tagging using SpaCy</h3>
+</section>
+<div class="cell code" data-execution_count="23" data-collapsed="false">
+    <div class="sourceCode" id="cb38"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a>spacyObjGerman <span
+            class="op">=</span> spacy.load(<span class="st">&quot;de_core_news_sm&quot;</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>germanWords_Doc <span class="op">=</span> spacyObjGerman(<span
+        class="st">&quot; &quot;</span>.join(germanTokens))</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>germanWords_Doc[:<span
+        class="dv">10</span>]</span></code></pre>
+    </div>
+    <div class="output execute_result" data-execution_count="23">
+        <pre><code>Am Anfang schuf Gott Himmel und Erde . Und die</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="24" data-collapsed="false">
+    <div class="sourceCode" id="cb40"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1"
+                                                                                           aria-hidden="true"
+                                                                                           tabindex="-1"></a><span
+            class="bu">print</span>(<span class="ss">f&quot;Word&quot;</span>.ljust(<span class="dv">15</span>), <span
+            class="st">&quot;Alpha&quot;</span>, <span class="st">&quot;Space&quot;</span>, <span class="st">&quot;Stop&quot;</span>, <span
+            class="st">&quot;Punctuation&quot;</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span
+        class="op">*</span> <span class="dv">47</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span
+        class="kw">in</span> germanWords_Doc[:<span class="dv">25</span>]:</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span
+        class="ss">f&quot;</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">&quot;</span>.ljust(<span
+        class="dv">15</span>), word.is_alpha, <span class="st">&#39;&#39;</span>, word.is_space, word.is_stop, word.is_punct)</span></code></pre>
+    </div>
+    <div class="output stream stdout">
+<pre><code>Word            Alpha Space Stop Punctuation
+-----------------------------------------------
+Am              True  False True False
+Anfang          True  False False False
+schuf           True  False False False
+Gott            True  False False False
+Himmel          True  False False False
+und             True  False True False
+Erde            True  False False False
+.               False  False False True
+Und             True  False True False
+die             True  False True False
+Erde            True  False False False
+war             True  False True False
+wüst            True  False False False
+und             True  False True False
+leer            True  False False False
+,               False  False False True
+und             True  False True False
+es              True  False True False
+war             True  False True False
+finster         True  False False False
+auf             True  False True False
+der             True  False True False
+Tiefe           True  False False False
+;               False  False False True
+und             True  False True False
+</code></pre>
+    </div>
+</div>
+<div class="cell code" data-execution_count="22" data-collapsed="false">
+    <div class="sourceCode" id="cb42"><pre
+            class="sourceCode python"><code class="sourceCode python"></code></pre>
+    </div>
+</div>
+</body>
+</html>
