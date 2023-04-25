@@ -19,5 +19,6 @@
   "anuppuccin-theme-settings@@anp-bg-fix": true,
   "anuppuccin-theme-settings@@anp-card-layout-actions": false,
   "anuppuccin-theme-settings@@anp-card-layout-filebrowser": true,
-  "anuppuccin-theme-settings@@anp-alt-tab-style": "anp-alternate-tab-toggle"
+  "anuppuccin-theme-settings@@anp-alt-tab-style": "anp-alternate-tab-toggle",
+  "anuppuccin-theme-settings@@anp-background-image-dark": "url(\"https://cdnb.artstation.com/p/assets/images/images/028/619/953/large/anton-dmitriev-sleep-tube4.jpg?1594990334\")"
 }
